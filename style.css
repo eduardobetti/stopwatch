@@ -22,11 +22,23 @@ body {
 
 .display {
     display: flex;
+    align-items: baseline;
+    width: 100vw;
+    padding-inline: 10vw;
 }
 
 p {
-    font-size: 20vw;
+    font-size: 16vw;
     color: white;
+}
+
+.dots {
+    font-size: 8vw;
+}
+
+#pCSeconds {
+    font-size: 6vw;
+    font-weight: 400;
 }
 
 .buttons {
@@ -35,7 +47,7 @@ p {
 }
 
 button {
-    font-size: 10vw;
+    font-size: 8vw;
     width: 30vw;
     cursor: pointer;
     border: none;

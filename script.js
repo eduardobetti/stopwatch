@@ -1,10 +1,12 @@
 const varStop = document.getElementById('stop')
 const varStart = document.getElementById('start')
 const varReset = document.getElementById('reset')
+let cSeconds = 0
 let seconds = 0
 let minutes = 0
 let hours = 0
 let cron
+let pCSeconds = document.getElementById('pCSeconds')
 let pSeconds = document.getElementById('pSeconds')
 let pMinutes = document.getElementById('pMinutes')
 let pHours = document.getElementById('pHours')
@@ -14,9 +16,14 @@ function start() {
     varStop.disabled = false;
     varReset.disabled = true;
     cron = setInterval(function () {
-        seconds++
-        pSeconds.innerHTML = seconds.toString().padStart(2, '0');
-        if (seconds === 60) {
+        cSeconds++
+        pCSeconds.innerHTML = cSeconds.toString().padStart(2, '0');
+        if (cSeconds === 100) {
+            cSeconds = 0
+            pCSeconds.innerHTML = `00`
+            seconds++
+            pSeconds.innerHTML = seconds.toString().padStart(2, '0');
+        } else if (seconds === 60) {
             seconds = 0
             pSeconds.innerHTML = `00`
             minutes++
@@ -27,7 +34,7 @@ function start() {
             hours++
             pHours.innerHTML = hours.toString().padStart(2, '0');
         }
-    }, 1000);
+    }, 10);
 }
 
 function stop() {
@@ -41,6 +48,8 @@ function reset() {
     varStart.disabled = false
     varStop.disabled = true
     varReset.disabled = true
+    cSeconds = 0
+    pCSeconds.innerHTML = `00`
     seconds = 0
     pSeconds.innerHTML = `00`
     minutes = 0
