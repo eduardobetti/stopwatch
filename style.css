@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+body {
+    background-color: #444444;
+    color: #dadada;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display {
+    display: flex;
+}
+
+p {
+    font-size: 20vw;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    font-size: 10vw;
+    width: 30vw;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+button:enabled {
+    border-style: outset;
+}
+
+button:disabled {
+    border-style: inset;
+}
+
+#start {
+    background-color: rgb(172, 255, 47);
+}
+
+#stop {
+    background-color: rgb(199, 0, 0);
+}
+
+#reset {
+    background-color: rgb(255, 166, 0);
+}
+
+@media (orientation: portrait) {
+    .buttons {
+        margin-top: 48px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    button {
+        width: 75vw;
+    }
+}
