@@ -1,6 +1,6 @@
 <h1>:stopwatch: Cronômetro - Stopwatch :stopwatch:</h1>
 <br>
-<img src="" alt="mockup-stopwatch">
+<img src="https://github.com/eduardobetti/stopwatch/blob/main/mockup-stopwatch.png?raw=true" alt="mockup-stopwatch">
 <br><br>
 <p>Cronômetro desenvolvido no módulo JavaScript do DevClub, utilizando as funções start(), stop(), setInterval() e clearInterval().
 Nesta aplicação, desenvolvi comandos que são acionados a partir dos botões Start (que está ativado originalmente), Stop e Reset (que estão desativados originalmente).</p>
