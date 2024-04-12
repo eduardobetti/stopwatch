@@ -22,5 +22,5 @@ Caso Reset seja acionado, o cronômetro retomará seu estado inicial, zerando o 
 
 <p>Decidi fazer uma aplicação esteticamente mais simples, mas extremamente funcional.
 Primeiramente havia desenvolvido sem a variável dos centésimos de segundo, mas percebi que sem ela, havia um problema:
-caso acionace o botão Stop pouco antes de completar o segundo, quando retomasse em Start, ele iniciaria a contagem das frações de segundo do zero, o que causaria um atraso no cronômetro.
+caso acionasse o botão Stop pouco antes de completar o segundo, quando retomasse em Start, ele iniciaria a contagem das frações de segundo do zero, o que causaria um atraso no cronômetro.
 Para tanto, decidi corrigir aplicando mais uma variável, de uma unidade menor (centésimo de segundo) que corrigiu este problema.</p>
